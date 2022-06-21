@@ -1,0 +1,69 @@
+
+body{
+    background-image: url(/slike/millionaire-progress-slogan-flying.webp);
+    background-size: cover;
+}
+
+.naslov{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.pitanja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    color: white;
+}
+
+.box-boss{
+    height: 500px ;
+    width: 1000px;
+    margin: auto;
+    border-radius: 5px;
+    border: solid 5px white;
+    background-image: url(/slike/milioner-backround.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bot-1{
+   
+    background-image: url(/slike/NCS_Who-Wants-To-Be-A-Millionaire-Broadcast-Studio_01.jpg);
+    height: 150px;
+    background-size: cover;
+    width: 250px;
+    border-radius: 10%;
+    border: solid 3px white;
+}
+
+.bot-2{
+    background-image: url(/slike/NCS_Who-Wants-To-Be-A-Millionaire-Broadcast-Studio_01.jpg);
+    height: 150px;
+    background-size: cover;
+    width: 250px;
+    border-radius: 10%;
+    border: solid 3px white;
+}
+
+.bot-3{
+    background-image: url(/slike/NCS_Who-Wants-To-Be-A-Millionaire-Broadcast-Studio_01.jpg);
+    height: 150px;
+    background-size: cover;
+    width: 250px;
+    border-radius: 10%;
+    border: solid 3px white;
+}
+
+.bot-4{
+    background-image: url(/slike/NCS_Who-Wants-To-Be-A-Millionaire-Broadcast-Studio_01.jpg);
+    height: 150px;
+    background-size: cover;
+    width: 250px;
+    border-radius: 10%;
+    border: solid 3px white;
+}

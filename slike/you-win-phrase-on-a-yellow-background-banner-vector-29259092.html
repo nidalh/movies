@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://cdn.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn.vectorstock.com">
+	<meta name="theme-color" content="#101122">
+	<script type="text/javascript" nonce="/YA/Qo6rpzjsHU6IIb/JpAQKAQAPMCHhPT3vGl5qZcc=">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"02e09611df",applicationID:"156179534"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="csrf-name" content="csrf627bdd1ba9183">
+	<meta name="csrf-value" content="89bfbcf331f55f9ab7f4c20e3f77b2bf">
+	<meta name="csp-nonce" content="/YA/Qo6rpzjsHU6IIb/JpAQKAQAPMCHhPT3vGl5qZcc=">
+	<meta name="cart-hash" content="d751713988987e9331980363e24189ce">
+	<meta name="live-settings" content="[]">
+	<meta name="twitter:site" content="@VectorStock">
+	<meta property="og:site_name" content="VectorStock">
+	<meta property="fb:app_id" content="241100862642313">
+
+	<link rel="shortcut icon" href="https://cdn.vectorstock.com/img/icons/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="VectorStock Search" href="https://www.vectorstock.com/xml/searchbox.xml">
+
+	<title>You win phrase on a yellow background banner Vector Image</title>
+	<meta name="description" content="You win. Phrase on a yellow background. Banner for business, marketing and advertising. Vector illustration. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+	
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.vectorstock.com/royalty-free-vector/you-win-phrase-on-a-yellow-background-banner-vector-29259092">
+	<meta property="og:title" content="You win phrase on a yellow background banner vector image on VectorStock">
+	<meta property="og:description" content="You win. Phrase on a yellow background. Banner for business, marketing and advertising. Vector illustration. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+	<meta property="og:image" content="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+	<meta property="og:image:url" content="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+	<meta property="og:image:secure_url" content="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="1000">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://www.vectorstock.com/royalty-free-vector/you-win-phrase-on-a-yellow-background-banner-vector-29259092">
+	<meta name="twitter:title" content="You win phrase on a yellow background banner vector image">
+	<meta name="twitter:description" content="You win. Phrase on a yellow background. Banner for business, marketing and advertising. Vector illustration">
+	<meta name="twitter:image" content="https://cdn3.vectorstock.com/i/thumb-large/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+	<meta name="twitter:image:width" content="238">
+	<meta name="twitter:image:height" content="250">
+
+	<link rel="canonical" href="https://www.vectorstock.com/royalty-free-vector/you-win-phrase-on-a-yellow-background-banner-vector-29259092">
+
+	<link rel="stylesheet" type="text/css" href="/cache/common1650943013.min.css">
+	<link rel="stylesheet" type="text/css" href="/cache/common-payment-paddle1650943013.min.css">
+	<link rel="stylesheet" type="text/css" href="/cache/vector1650943013.min.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBXWNL4G7Q"></script>
+	<script src="/cache/common1651116065.min.js"></script>
+	<script src="/cache/common-payment-paddle1651116065.min.js"></script>
+	<script src="/cache/vector1651116065.min.js"></script>
+</head>
+<body>
+
+<!-- Top header -->
+<header>
+	<nav class="top">
+		<figure>
+			<a href="/" title="VectorStock&reg;">VectorStock&reg;</a>
+		</figure>
+
+		<div class="grid">
+			<form id="searchbox" class="focused empty">
+				<div class="wrap">
+					<fieldset>
+						<div class="contents">
+							<div class="tags">
+								<ul></ul>
+							</div>
+							<div class="input">
+								<input type="text" name="input" autocomplete="off" autocapitalize="none" spellcheck="true" value="" placeholder="Search&hellip;" maxlength="50" autofocus>
+								<button type="button" data-action="clear">&times;</button>
+							</div>
+
+							<input type="hidden" name="category" value="">
+							<input type="hidden" name="custom_srp" value="">
+							<input type="hidden" name="artist" value="">
+							<input type="hidden" name="similar" value="">
+						</div>
+					</fieldset>
+
+					<button type="submit">
+						<span class="icon">Search</span>
+					</button>
+				</div>
+			</form>
+			<ul>
+				<li><a href="/royalty-free-vectors">All Vectors</a></li>
+				<li><a href="/free-vectors">Free Vectors</a></li>
+			</ul>
+		</div>
+
+		<div class="aside">
+			<ul>
+				<li><a href="/popular-categories" title="Popular Categories">Categories</a></li>
+				<li><a href="/pricing" title="Pricing">Pricing</a></li>
+				<li class="account">
+					<button type="button" data-action="signup">Sign Up</button>
+					<button type="button" data-action="login">Login</button>
+				</li>
+			</ul>
+		</div>
+
+		<div id="mobilenav-icon">
+			<span></span><span></span><span></span><span></span>
+		</div>
+	</nav>
+
+	<!-- Submenu -->
+		<nav id="searchrelated"></nav>	
+
+
+	<!-- Mobile menu -->
+	<div id="mobilenav-menu">
+		<div>
+			<div class="group">
+				<h4>Browse</h4>
+				<ul>
+					<li><a href="/royalty-free-vectors">All Vectors</a></li>
+					<li><a href="/free-vectors">Free Vectors</a></li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4>Account</h4>
+				<ul>
+					<li class="account">
+						<ul>
+							<li><a href="/signup">Sign Up</a></li>
+							<li data-action="login"><a href="/?login=1">Login&hellip;</a></li>
+							<li><a href="/pricing">Pricing</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form method="get" action="/auth/logout" class="logout">
+					<input type="hidden" name="logout" value="1">
+				</form>
+			</div>
+			<div class="group">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="/faq"><abbr title="Frequently Asked Questions">FAQs</abbr></a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<!-- Account Menu Tabs -->
+		<aside id="nav_sidebar" class="tabs tabsDark">
+
+			<nav>
+				<ul role="tablist">
+					<li data-tab-id="signup" class=""><span role="tab"><span>Sign Up</span></span></li>
+					<li data-tab-id="login" class="selected"><span role="tab"><span>Log In</span></span></li>
+				</ul>
+			</nav>
+
+			<section id="sb_signup" data-tab-id="signup" class="">
+				<div class="primary">
+					<p>New to VectorStock?</p>
+					<p><em>We&apos;re the largest royalty-free, vector-only stock agency in the world.</em></p>
+					<p>Every week we add new premium graphics by the thousands.</p>
+				</div>
+				<div class="secondary">
+					<p>Whether you&apos;re a global ad&nbsp;agency or a freelance graphic designer, we have the vector graphics to make your project come to life.</p>
+					<p>Buy Vectors, sell Vectors or both. <a href="/signup">Sign up now, it&rsquo;s free.</a></p>
+				</div>
+				<div class="footer">
+					<button class="master">
+						<span class="title">Sign Up...</span>
+						<span class="value">
+							<span class="symbol signup"></span>
+						</span>
+					</button>
+				</div>
+			</section>
+
+			<section id="sb_login" data-tab-id="login" class="selected">
+				<form action="/auth/login" method="post">
+					<fieldset class="">
+						<label for="vs_username">Email / Username</label>
+						<div class="textfield">
+							<input type="text" id="vs_username" name="vs_username" value="" autocomplete="on" tabindex="1">
+						</div>
+					</fieldset>
+					<fieldset class="">
+						<label for="vs_password">Password</label>
+						<button type="button" class="forgot">Forgot Password</button>
+						<div class="textfield">
+							<input type="password" id="vs_password" name="vs_password" value="" autocomplete="on" tabindex="2"  maxlength="72">
+						</div>
+					</fieldset>
+
+
+					<button type="submit" tabindex="4">Log In</button>
+				</form>
+				<div class="alternatives">
+					<h6>Or Login With</h6>
+					<ul>
+						<li class="gp"><a href="/">
+							<span class="title">Google</span>
+							<span class="icon"></span>
+						</a></li>
+						<li class="fb"><a href="/">
+							<span class="title">Facebook</span>
+							<span class="icon"></span>
+						</a></li>
+					</ul>
+				</div>
+
+				
+			</section>
+		</aside>
+
+	<!-- Page -->
+	<article>
+		<section id="vs-asset">
+
+			<!-- Aside -->
+			<div class="aside">
+				<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors">
+							<span itemprop="name">Royalty Free Vectors</span>
+						</a>
+						<meta itemprop="position" content="1" />
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors/win-vectors">
+							<span itemprop="name">Win Vectors</span>
+						</a>
+						<meta itemprop="position" content="2" />
+					</li>
+				</ol>
+
+				<h1>You win phrase on a yellow background banner vector&nbsp;image</h1>
+
+				<figure style="padding-top: 99%;" class="target">
+					<div class="highres" data-src="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+						<picture>
+							<source type="image/webp" srcset="https://cdn.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.webp">
+							<source type="image/jpeg" srcset="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+							<img src="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg" importance="high" title="You win phrase on a yellow background banner vector image" alt="You win phrase on a yellow background banner">
+						</picture>
+					</div>
+					<div class="overlay"></div>
+				</figure>
+
+				<form data-loggedin="0" data-licenses="2" data-license="standard" data-status="" data-payment="single-image">
+					<input type="hidden" id="vector_id" value="29259092">
+					<input type="hidden" id="vector_title" value="You win phrase on a yellow background banner">
+					<input type="hidden" id="vector_description" value="You win. Phrase on a yellow background. Banner for business, marketing and advertising. Vector illustration. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+					<input type="hidden" id="vector_url" value="https://www.vectorstock.com/royalty-free-vector/you-win-phrase-on-a-yellow-background-banner-vector-29259092">
+					<input type="hidden" id="vector_media" value="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+					<input type="hidden" id="vector_ratio" value="1">
+					<input type="hidden" id="vector_license_status" value="">
+					<input type="hidden" id="artist_name" value="The_Believer">
+					<input type="hidden" id="account_user" value="0">
+
+					<input type="hidden" id="vector_transparent_png" value="0">
+					<input type="hidden" id="vector_download_urls" value="[]">
+					<input type="hidden" id="vector_license_options" value="[{&quot;type&quot;:&quot;standard&quot;,&quot;cost&quot;:{&quot;single-image&quot;:14.99,&quot;credits&quot;:1,&quot;subscription&quot;:1}},{&quot;type&quot;:&quot;expanded&quot;,&quot;cost&quot;:{&quot;single-image&quot;:39.99,&quot;credits&quot;:30}}]">
+					<input type="hidden" id="account_filetype" value="zip">
+					<input type="hidden" id="account_customizations" value="[]">
+					<input type="hidden" id="account_cloud" value="[{&quot;type&quot;:&quot;googledrive&quot;,&quot;status&quot;:&quot;connect&quot;}]">
+					
+					<div class="options">
+						<!--
+						-- OPTION: License type
+						-->
+						<div class="option" data-type="license" data-license="standard" data-licenses="2">
+							<h6><span class="type">License</span><a href="/faq/members/standard-license">Learn More</a></h6>
+							<div class="optgroup radgroup">
+								<fieldset class="checked">
+									<label for="f_license_standard">
+										<input type="radio" id="f_license_standard" name="license" value="standard" checked="checked" tabindex="2">
+										<span class="label">Standard</span>
+										<span class="descr">For Print, Advertising, Design</span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_license_expanded">
+										<input type="radio" id="f_license_expanded" name="license" value="expanded" tabindex="4">
+										<span class="label">Expanded</span>
+										<span class="descr">For Print on Demand &amp; Resale</span>
+									</label>
+								</fieldset>
+							</div>
+
+							<div class="help">
+								<p>The license type determines how you can use this image.</p>
+								<table>
+									<thead>
+										<tr>
+											<th></th>
+																						<th data-license="standard">Std.</th>																						<th data-license="expanded">Exp.</th>										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td>Print / Editorial</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Graphic Design</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Web Design</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Social Media</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Edit &amp; Modify</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Multi-user</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Resale Items</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Print on Demand</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						<!--
+						-- OPTION: Payment options (Standard)
+						-->
+						<div class="option" data-type="payment" data-license="standard">
+							<h6><span class="type">Ways to Buy</span><a href="/pricing">Compare</a></h6>
+							<div class="optgroup radgroup" data-license="standard">
+								<fieldset class="checked" >
+									<label for="f_payment_standard_single-image">
+										<input type="radio" id="f_payment_standard_single-image" name="payment_standard" data-cost="14.99" value="single-image"  checked="checked" tabindex="5">
+										<span class="label">Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>14.99</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_credits">
+										<input type="radio" id="f_payment_standard_credits" name="payment_standard" data-cost="1" value="credits" tabindex="6">
+										<span class="label">Credits</span>
+										<span class="value"><small>&#36;</small><var>1.00</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_subscription">
+										<input type="radio" id="f_payment_standard_subscription" name="payment_standard" data-cost="1" value="subscription" tabindex="7">
+										<span class="label">Subscription</span>
+										<span class="value"><small>&#36;</small><var>0.69</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>There are three ways to pay for Standard licenses. Prices are &#36;<abbr title="United States Dollar">USD</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Image Price</th>
+										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-per-Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>14.99</span>
+												</span>
+												<span class="byline">One-time payment</span>
+											</td>
+										</tr>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pre-paid Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>1</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = &#36;1). Minimum purchase of 30.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Subscription Plan</span>
+													<span class="dm"></span>
+													<span class="dd"><em>From</em> 69&cent;</span>
+												</span>
+												<span class="byline">Choose a monthly plan. Unused downloads automatically roll into following month.</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--
+						-- OPTION: Payment options (Expanded)
+						-->
+						<div class="option" data-type="payment" data-license="expanded">
+							<h6><span class="type">Ways to Buy</span><a href="/faq/members/ways-to-buy">Compare</a></h6>
+							<div class="optgroup radgroup" data-license="expanded">
+								<fieldset class="checked">
+									<label for="f_payment_expanded_single-image">
+										<input type="radio" id="f_payment_expanded_single-image" name="payment_expanded" data-cost="39.99" value="single-image" checked="checked" tabindex="8">
+										<span class="label">Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>39.99</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_expanded_credits">
+										<input type="radio" id="f_payment_expanded_credits" name="payment_expanded" data-cost="30" value="credits" tabindex="9">
+										<span class="label">Credits</span>
+										<span class="value"><small>&#36;</small><var>30.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+														<div class="help">
+								<p>There are two ways to pay for Expanded licenses. Prices are &#36;<abbr title="United States Dollar">USD</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Cost per Image</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-per-Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>39.99</span>
+												</span>
+												<span class="byline">One-off payment, no signup needed.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pre-paid Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>30</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = &#36;1).</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+													</div>
+						<!--
+						-- OPTION: Customization
+						-->
+						<div class="option" data-type="customization">
+							<h6><span class="type">New Option!</span><a href="/faq/members/what-is-hire-a-designer">What is this?</a></h6>
+							<div class="optgroup chkgroup">
+								<fieldset>
+									<label for="f_payment_customization">
+										<input type="checkbox" id="f_payment_customization" name="payment_customization" data-cost="85" value="customization" tabindex="12">
+										<span class="label">Customize image</span>
+										<span class="descr">Only available with Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>85.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>Love the image but just need a few modifications? Let our talented artists do the work for you!</p>
+								<p>We&rsquo;ll connect you with a designer who can make updates and send you the artwork in a format of your choice.</p>
+								<h4>Examples</h4>
+								<ul>
+									<li>Change the text</li>
+									<li>Modify colors</li>
+									<li>Resize to new dimensions</li>
+									<li>Include logo or symbol</li>
+									<li>Add your company or business name</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="download">
+						<button type="button" data-action="download">
+							<span class="label">Download Image</span>
+							<span class="icon"></span>
+						</button>
+						<h6><span class="label">Files Included</span></h6>
+						<div class="help">
+							<span class="loading"><span class="label">Loading Details...</span></span>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Image -->
+			<div class="image">
+				<figure data-orientation="square" style="padding-top: 99%;" class="target">
+					<div class="highres" data-src="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+						<picture>
+							<source type="image/webp" srcset="https://cdn.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.webp">
+							<source type="image/jpeg" srcset="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+							<img src="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg" importance="high" title="You win phrase on a yellow background banner vector image" alt="You win phrase on a yellow background banner">
+						</picture>
+					</div>
+					<div class="overlay"></div>
+					<div class="panels">
+						<div class="share">
+							<ul>
+								<li><button type="button" data-action="pinterest"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M12.5,0C5.6,0,0,5.6,0,12.5c0,5.12,3.08,9.52,7.48,11.45c-0.03-0.87-0.01-1.92,0.22-2.87c0.24-1.01,1.61-6.81,1.61-6.81s-0.4-0.8-0.4-1.98c0-1.85,1.07-3.24,2.41-3.24c1.14,0,1.69,0.85,1.69,1.88c0,1.14-0.73,2.85-1.1,4.44c-0.31,1.33,0.67,2.41,1.97,2.41c2.37,0,3.96-3.04,3.96-6.65c0-2.74-1.85-4.79-5.2-4.79c-3.79,0-6.15,2.83-6.15,5.99c0,1.09,0.32,1.86,0.82,2.45c0.23,0.27,0.26,0.38,0.18,0.7c-0.06,0.23-0.2,0.78-0.25,1c-0.08,0.32-0.34,0.43-0.63,0.31c-1.75-0.71-2.56-2.62-2.56-4.77c0-3.55,3-7.81,8.93-7.81c4.77,0,7.91,3.45,7.91,7.16c0,4.9-2.73,8.57-6.75,8.57c-1.35,0-2.62-0.73-3.05-1.56c0,0-0.73,2.88-0.88,3.44c-0.27,0.96-0.78,1.93-1.26,2.68C10.08,24.82,11.27,25,12.5,25C19.4,25,25,19.4,25,12.5S19.4,0,12.5,0L12.5,0z"/></svg></span><span class="label">Save to Pinterest</span></button></li>
+								<li><button type="button" data-action="facebook"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M22.44,1H2.56C1.7,1,1,1.7,1,2.56v19.88C1,23.3,1.7,24,2.56,24h10.41v-8.89H9.98v-3.46h2.99V9.1c0-2.96,1.81-4.58,4.45-4.58c1.27,0,2.35,0.09,2.67,0.14v3.1l-1.83,0c-1.44,0-1.72,0.68-1.72,1.69v2.21h3.43l-0.45,3.46h-2.98V24h5.89C23.3,24,24,23.3,24,22.44V2.56C24,1.7,23.3,1,22.44,1z"/></svg></span><span class="label">Post to Facebook</span></button></li>
+								<li><button type="button" data-action="twitter"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M7.86,22.5c9.43,0,14.59-7.69,14.59-14.37c0-0.22,0-0.44-0.01-0.65c1-0.71,1.87-1.6,2.56-2.61c-0.92,0.4-1.91,0.67-2.95,0.79c1.06-0.62,1.87-1.61,2.26-2.79c-0.99,0.58-2.09,1-3.26,1.23c-0.94-0.98-2.27-1.6-3.74-1.6c-2.83,0-5.13,2.26-5.13,5.05c0,0.4,0.05,0.78,0.13,1.15C8.05,8.49,4.27,6.48,1.74,3.42C1.3,4.17,1.05,5.04,1.05,5.96c0,1.75,0.91,3.3,2.28,4.2C2.49,10.14,1.7,9.91,1,9.53C1,9.55,1,9.58,1,9.6c0,2.45,1.77,4.49,4.11,4.95c-0.43,0.12-0.88,0.18-1.35,0.18c-0.33,0-0.65-0.03-0.96-0.09c0.65,2.01,2.55,3.47,4.79,3.51C5.84,19.5,3.63,20.3,1.22,20.3c-0.41,0-0.82-0.02-1.22-0.07C2.27,21.66,4.97,22.5,7.86,22.5"/></svg></span><span class="label">Post to Twitter</span></button></li>
+							</ul>
+							<ul>
+								<li><button type="button" data-action="email"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M24.37,2.25c-0.07,0-0.15,0.01-0.22,0.04l-2.75,1L0.24,12.14c-0.3,0.13-0.33,0.54-0.05,0.71l3.94,2.39l0.99,0.6l1.94,5.58c0.05,0.14,0.25,0.1,0.25-0.04l0.03-4.19v-0.05l8.87-7.49c0.15-0.13,0.37-0.12,0.52,0.01l0,0c0.17,0.15,0.17,0.42,0.01,0.58L8.85,18v0.18l7.53,4.52c0.21,0.13,0.48,0.04,0.57-0.19l7.89-19.11l0.11-0.28C25.13,2.68,24.8,2.25,24.37,2.25z"/></svg></span><span class="label">Send by Email</span></button></li>
+							</ul>
+						</div>
+						<div class="composite">
+							<button type="button" data-action="download"><span><span class="label">Download JPG Preview Image</span></span></button>
+						</div>
+					</div>
+				</figure>
+				<div class="details">
+					<div class="meta">
+						<ul>
+							<li class="meta-id">
+								<dl><dt>Image ID</dt><dd>29259092</dd></dl>
+							</li>
+							<li class="meta-color-mode">
+								<dl><dt>Color Mode</dt><dd>RGB</dd></dl>
+							</li>
+							<li class="meta-artist">
+								<dl>
+									<dt>Artist</dt>
+									<dd>
+										<a href="/royalty-free-vectors/vectors-by_The_Believer" rel="nofollow">The_Believer</a>
+										<button type="button" data-action="follow" title="Follow Artists that you like to create a newsfeed of their recent images."><span class="label">Follow</span></button>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="options" data-total="2">
+						<ul>
+							<li class="opt-like">
+								<button type="button" data-action="like" data-count="0"><span class="icon">&hearts;</span><span class="label">Like</span><span class="tally"></span></button>
+							</li>
+							<li class="opt-cart">
+								<button type="button" data-action="cart"><span class="icon">+</span><span class="label">Cart</span></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Metadata -->
+			<div class="metadata">
+				<div itemtype="http://schema.org/ImageObject" itemscope>
+					<meta itemprop="contentUrl" content="https://cdn3.vectorstock.com/i/1000x1000/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+					<meta itemprop="thumbnailUrl" content="https://cdn3.vectorstock.com/i/thumb-large/90/92/you-win-phrase-on-a-yellow-background-banner-vector-29259092.jpg">
+					<meta itemprop="name" content="You win phrase on a yellow background banner">
+					<meta itemprop="description" content="You win. Phrase on a yellow background. Banner for business, marketing and advertising. Vector illustration. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images. vector image">
+					<meta itemprop="author" content="The_Believer"/>
+					<meta itemprop="datePublished" content="2020-02-07">
+					<meta itemprop="license" content="https://www.vectorstock.com/faq/members/standard-license">
+					<meta itemprop="acquireLicensePage" content="https://www.vectorstock.com/royalty-free-vector/you-win-phrase-on-a-yellow-background-banner-vector-29259092">
+					<meta itemprop="sourceOrganization" content="VectorStock.com">
+				</div>
+			</div>
+			
+		</section>
+
+
+		<section id="vs-related">
+						<div id="group-similar" class="group">
+				<h6><span class="icon"></span><strong>Similar Images</strong></h6>
+
+				<div class="gallery large">
+					<ul>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/63/31/you-win-text-over-color-golden-confetti-vector-26276331.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-text-over-color-golden-confetti-vector-26276331" title="you win text over color golden confetti vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/63/31/you-win-text-over-color-golden-confetti-vector-26276331.jpg" title="you win text over color golden confetti" alt="you win text over color golden confetti vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/75/25/winner-success-award-web-banner-or-competition-vector-29057525.jpg"><a href="//www.vectorstock.com/royalty-free-vector/winner-success-award-web-banner-or-competition-vector-29057525" title="winner success award web banner or competition vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/75/25/winner-success-award-web-banner-or-competition-vector-29057525.jpg" title="winner success award web banner or competition" alt="winner success award web banner or competition vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/64/60/you-win-winner-poster-liquid-color-neon-sign-vector-39446460.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-winner-poster-liquid-color-neon-sign-vector-39446460" title="you win winner poster liquid color neon sign vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/64/60/you-win-winner-poster-liquid-color-neon-sign-vector-39446460.jpg" title="you win winner poster liquid color neon sign" alt="you win winner poster liquid color neon sign vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/12/39/you-win-winner-banner-background-vector-28491239.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-winner-banner-background-vector-28491239" title="you win winner banner background vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/12/39/you-win-winner-banner-background-vector-28491239.jpg" title="you win winner banner background" alt="you win winner banner background vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/96/08/megaphone-with-you-win-speech-bubble-banner-vector-27389608.jpg"><a href="//www.vectorstock.com/royalty-free-vector/megaphone-with-you-win-speech-bubble-banner-vector-27389608" title="megaphone with you win speech bubble banner vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/96/08/megaphone-with-you-win-speech-bubble-banner-vector-27389608.jpg" title="megaphone with you win speech bubble banner" alt="megaphone with you win speech bubble banner vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/89/15/you-win-red-and-yellow-text-effect-template-vector-33898915.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-red-and-yellow-text-effect-template-vector-33898915" title="you win red and yellow text effect template vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/89/15/you-win-red-and-yellow-text-effect-template-vector-33898915.jpg" title="you win red and yellow text effect template" alt="you win red and yellow text effect template vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/36/75/you-win-golden-coins-casino-sign-machine-night-vector-32303675.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-golden-coins-casino-sign-machine-night-vector-32303675" title="you win golden coins casino sign machine night vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/36/75/you-win-golden-coins-casino-sign-machine-night-vector-32303675.jpg" title="you win golden coins casino sign machine night" alt="you win golden coins casino sign machine night vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/96/23/you-win-casino-poster-banner-design-vector-24059623.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-casino-poster-banner-design-vector-24059623" title="you win casino poster banner design vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/96/23/you-win-casino-poster-banner-design-vector-24059623.jpg" title="you win casino poster banner design" alt="you win casino poster banner design vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/51/53/you-win-neon-sign-win-design-template-vector-21895153.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-neon-sign-win-design-template-vector-21895153" title="you win neon sign win design template vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/51/53/you-win-neon-sign-win-design-template-vector-21895153.jpg" title="you win neon sign win design template" alt="you win neon sign win design template vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/13/23/you-win-concept-with-realistic-3d-detailed-golden-vector-21391323.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-concept-with-realistic-3d-detailed-golden-vector-21391323" title="you win concept with realistic 3d detailed golden vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/13/23/you-win-concept-with-realistic-3d-detailed-golden-vector-21391323.jpg" title="you win concept with realistic 3d detailed golden" alt="you win concept with realistic 3d detailed golden vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/60/30/you-lose-win-defeat-inscriptions-on-award-vector-37836030.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-lose-win-defeat-inscriptions-on-award-vector-37836030" title="you lose win defeat inscriptions on award vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/60/30/you-lose-win-defeat-inscriptions-on-award-vector-37836030.jpg" title="you lose win defeat inscriptions on award" alt="you lose win defeat inscriptions on award vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/67/72/you-win-celebration-design-game-element-birthday-vector-24176772.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-celebration-design-game-element-birthday-vector-24176772" title="you win celebration design game element birthday vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/67/72/you-win-celebration-design-game-element-birthday-vector-24176772.jpg" title="you win celebration design game element birthday" alt="you win celebration design game element birthday vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/43/86/you-win-and-golden-circles-vector-23044386.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-and-golden-circles-vector-23044386" title="you win and golden circles vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/43/86/you-win-and-golden-circles-vector-23044386.jpg" title="you win and golden circles" alt="you win and golden circles vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/93/84/wow-you-win-vector-29239384.jpg"><a href="//www.vectorstock.com/royalty-free-vector/wow-you-win-vector-29239384" title="wow you win vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/93/84/wow-you-win-vector-29239384.jpg" title="wow you win" alt="wow you win vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/27/35/you-win-congratulation-template-with-star-crown-vector-35682735.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-congratulation-template-with-star-crown-vector-35682735" title="you win congratulation template with star crown vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/27/35/you-win-congratulation-template-with-star-crown-vector-35682735.jpg" title="you win congratulation template with star crown" alt="you win congratulation template with star crown vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/59/69/you-win-message-in-pop-art-style-vector-28395969.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-message-in-pop-art-style-vector-28395969" title="you win message in pop art style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/59/69/you-win-message-in-pop-art-style-vector-28395969.jpg" title="you win message in pop art style" alt="you win message in pop art style vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/47/47/big-win-vector-22054747.jpg"><a href="//www.vectorstock.com/royalty-free-vector/big-win-vector-22054747" title="big win vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/47/47/big-win-vector-22054747.jpg" title="big win" alt="big win vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/51/60/you-win-posters-vector-8685160.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-posters-vector-8685160" title="you win posters vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/51/60/you-win-posters-vector-8685160.jpg" title="you win posters" alt="you win posters vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/85/15/you-win-neon-light-retro-signboard-vector-32088515.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-neon-light-retro-signboard-vector-32088515" title="you win - neon light retro signboard vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/85/15/you-win-neon-light-retro-signboard-vector-32088515.jpg" title="you win - neon light retro signboard" alt="you win - neon light retro signboard vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/14/15/you-win-banner-vector-27941415.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-banner-vector-27941415" title="you win banner vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/14/15/you-win-banner-vector-27941415.jpg" title="you win banner" alt="you win banner vector image"></noscript></a></li>
+					</ul>
+				</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="28291056" data-title="you win lettering on bright background" data-src="https://cdn2.vectorstock.com/i/thumbs/10/56/you-win-lettering-on-bright-background-vector-28291056.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-lettering-on-bright-background-vector-28291056" title="you win lettering on bright background vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/10/56/you-win-lettering-on-bright-background-vector-28291056.jpg" title="you win lettering on bright background" alt="you win lettering on bright background vector image"></noscript></a></li>
+						<li data-id="22777838" data-title="volleyball sport tournament banners" data-src="https://cdn4.vectorstock.com/i/thumbs/78/38/volleyball-sport-tournament-banners-vector-22777838.jpg"><a href="//www.vectorstock.com/royalty-free-vector/volleyball-sport-tournament-banners-vector-22777838" title="volleyball sport tournament banners vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/78/38/volleyball-sport-tournament-banners-vector-22777838.jpg" title="volleyball sport tournament banners" alt="volleyball sport tournament banners vector image"></noscript></a></li>
+						<li data-id="40288439" data-title="trophy cup champion label" data-src="https://cdn5.vectorstock.com/i/thumbs/84/39/trophy-cup-champion-label-vector-40288439.jpg"><a href="//www.vectorstock.com/royalty-free-vector/trophy-cup-champion-label-vector-40288439" title="trophy cup champion label vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/84/39/trophy-cup-champion-label-vector-40288439.jpg" title="trophy cup champion label" alt="trophy cup champion label vector image"></noscript></a></li>
+						<li data-id="36218833" data-title="modern sport game tournament championship contest" data-src="https://cdn4.vectorstock.com/i/thumbs/88/33/modern-sport-game-tournament-championship-contest-vector-36218833.jpg"><a href="//www.vectorstock.com/royalty-free-vector/modern-sport-game-tournament-championship-contest-vector-36218833" title="modern sport game tournament championship contest vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/88/33/modern-sport-game-tournament-championship-contest-vector-36218833.jpg" title="modern sport game tournament championship contest" alt="modern sport game tournament championship contest vector image"></noscript></a></li>
+						<li data-id="25132889" data-title="win hand written lettering text banner" data-src="https://cdn5.vectorstock.com/i/thumbs/28/89/win-hand-written-lettering-text-banner-vector-25132889.jpg"><a href="//www.vectorstock.com/royalty-free-vector/win-hand-written-lettering-text-banner-vector-25132889" title="win hand written lettering text banner vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/28/89/win-hand-written-lettering-text-banner-vector-25132889.jpg" title="win hand written lettering text banner" alt="win hand written lettering text banner vector image"></noscript></a></li>
+						<li data-id="24009885" data-title="contest luxury banner enter to win" data-src="https://cdn1.vectorstock.com/i/thumbs/98/85/contest-luxury-banner-enter-to-win-vector-24009885.jpg"><a href="//www.vectorstock.com/royalty-free-vector/contest-luxury-banner-enter-to-win-vector-24009885" title="contest luxury banner enter to win vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/98/85/contest-luxury-banner-enter-to-win-vector-24009885.jpg" title="contest luxury banner enter to win" alt="contest luxury banner enter to win vector image"></noscript></a></li>
+						<li data-id="30739360" data-title="tournament bracket template for 32 teams on blue" data-src="https://cdn1.vectorstock.com/i/thumbs/93/60/tournament-bracket-template-for-32-teams-on-blue-vector-30739360.jpg"><a href="//www.vectorstock.com/royalty-free-vector/tournament-bracket-template-for-32-teams-on-blue-vector-30739360" title="tournament bracket template for 32 teams on blue vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/93/60/tournament-bracket-template-for-32-teams-on-blue-vector-30739360.jpg" title="tournament bracket template for 32 teams on blue" alt="tournament bracket template for 32 teams on blue vector image"></noscript></a></li>
+						<li data-id="26824405" data-title="gold silver and bronze medals on ribbons" data-src="https://cdn1.vectorstock.com/i/thumbs/44/05/gold-silver-and-bronze-medals-on-ribbons-vector-26824405.jpg"><a href="//www.vectorstock.com/royalty-free-vector/gold-silver-and-bronze-medals-on-ribbons-vector-26824405" title="gold silver and bronze medals on ribbons vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/44/05/gold-silver-and-bronze-medals-on-ribbons-vector-26824405.jpg" title="gold silver and bronze medals on ribbons" alt="gold silver and bronze medals on ribbons vector image"></noscript></a></li>
+						<li data-id="21267594" data-title="glowing pixel cup pretty awarad colorful banner" data-src="https://cdn5.vectorstock.com/i/thumbs/75/94/glowing-pixel-cup-pretty-awarad-colorful-banner-vector-21267594.jpg"><a href="//www.vectorstock.com/royalty-free-vector/glowing-pixel-cup-pretty-awarad-colorful-banner-vector-21267594" title="glowing pixel cup pretty awarad colorful banner vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/75/94/glowing-pixel-cup-pretty-awarad-colorful-banner-vector-21267594.jpg" title="glowing pixel cup pretty awarad colorful banner" alt="glowing pixel cup pretty awarad colorful banner vector image"></noscript></a></li>
+						<li data-id="32216807" data-title="congratulations game screen golden congrats sign" data-src="https://cdn3.vectorstock.com/i/thumbs/68/07/congratulations-game-screen-golden-congrats-sign-vector-32216807.jpg"><a href="//www.vectorstock.com/royalty-free-vector/congratulations-game-screen-golden-congrats-sign-vector-32216807" title="congratulations game screen golden congrats sign vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/68/07/congratulations-game-screen-golden-congrats-sign-vector-32216807.jpg" title="congratulations game screen golden congrats sign" alt="congratulations game screen golden congrats sign vector image"></noscript></a></li>
+						<li data-id="40871269" data-title="1st place competition winner golden number one" data-src="https://cdn5.vectorstock.com/i/thumbs/12/69/1st-place-competition-winner-golden-number-one-vector-40871269.jpg"><a href="//www.vectorstock.com/royalty-free-vector/1st-place-competition-winner-golden-number-one-vector-40871269" title="1st place competition winner golden number one vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/12/69/1st-place-competition-winner-golden-number-one-vector-40871269.jpg" title="1st place competition winner golden number one" alt="1st place competition winner golden number one vector image"></noscript></a></li>
+						<li data-id="39955626" data-title="giveaway banner template winning offer gifts" data-src="https://cdn2.vectorstock.com/i/thumbs/56/26/giveaway-banner-template-winning-offer-gifts-vector-39955626.jpg"><a href="//www.vectorstock.com/royalty-free-vector/giveaway-banner-template-winning-offer-gifts-vector-39955626" title="giveaway banner template winning offer gifts vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/56/26/giveaway-banner-template-winning-offer-gifts-vector-39955626.jpg" title="giveaway banner template winning offer gifts" alt="giveaway banner template winning offer gifts vector image"></noscript></a></li>
+						<li data-id="40923932" data-title="photography competition concept for template" data-src="https://cdn3.vectorstock.com/i/thumbs/39/32/photography-competition-concept-for-template-vector-40923932.jpg"><a href="//www.vectorstock.com/royalty-free-vector/photography-competition-concept-for-template-vector-40923932" title="photography competition concept for template vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/39/32/photography-competition-concept-for-template-vector-40923932.jpg" title="photography competition concept for template" alt="photography competition concept for template vector image"></noscript></a></li>
+						<li data-id="38296984" data-title="win banner or billboard for gambling games online" data-src="https://cdn5.vectorstock.com/i/thumbs/69/84/win-banner-or-billboard-for-gambling-games-online-vector-38296984.jpg"><a href="//www.vectorstock.com/royalty-free-vector/win-banner-or-billboard-for-gambling-games-online-vector-38296984" title="win banner or billboard for gambling games online vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/69/84/win-banner-or-billboard-for-gambling-games-online-vector-38296984.jpg" title="win banner or billboard for gambling games online" alt="win banner or billboard for gambling games online vector image"></noscript></a></li>
+						<li data-id="28316277" data-title="giveaway banner template gift boxes and button" data-src="https://cdn3.vectorstock.com/i/thumbs/62/77/giveaway-banner-template-gift-boxes-and-button-vector-28316277.jpg"><a href="//www.vectorstock.com/royalty-free-vector/giveaway-banner-template-gift-boxes-and-button-vector-28316277" title="giveaway banner template gift boxes and button vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/62/77/giveaway-banner-template-gift-boxes-and-button-vector-28316277.jpg" title="giveaway banner template gift boxes and button" alt="giveaway banner template gift boxes and button vector image"></noscript></a></li>
+						<li data-id="25696605" data-title="old school monotone black and white sports" data-src="https://cdn1.vectorstock.com/i/thumbs/66/05/old-school-monotone-black-and-white-sports-vector-25696605.jpg"><a href="//www.vectorstock.com/royalty-free-vector/old-school-monotone-black-and-white-sports-vector-25696605" title="old school monotone black and white sports vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/66/05/old-school-monotone-black-and-white-sports-vector-25696605.jpg" title="old school monotone black and white sports" alt="old school monotone black and white sports vector image"></noscript></a></li>
+						<li data-id="32121043" data-title="giveaway winner poster" data-src="https://cdn4.vectorstock.com/i/thumbs/10/43/giveaway-winner-poster-vector-32121043.jpg"><a href="//www.vectorstock.com/royalty-free-vector/giveaway-winner-poster-vector-32121043" title="giveaway winner poster vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/10/43/giveaway-winner-poster-vector-32121043.jpg" title="giveaway winner poster" alt="giveaway winner poster vector image"></noscript></a></li>
+						<li data-id="29060125" data-title="giveaway winner poster gift offer banner" data-src="https://cdn1.vectorstock.com/i/thumbs/01/25/giveaway-winner-poster-gift-offer-banner-vector-29060125.jpg"><a href="//www.vectorstock.com/royalty-free-vector/giveaway-winner-poster-gift-offer-banner-vector-29060125" title="giveaway winner poster gift offer banner vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/01/25/giveaway-winner-poster-gift-offer-banner-vector-29060125.jpg" title="giveaway winner poster gift offer banner" alt="giveaway winner poster gift offer banner vector image"></noscript></a></li>
+						<li data-id="27409388" data-title="win prizes banner design" data-src="https://cdn4.vectorstock.com/i/thumbs/93/88/win-prizes-banner-design-vector-27409388.jpg"><a href="//www.vectorstock.com/royalty-free-vector/win-prizes-banner-design-vector-27409388" title="win prizes banner design vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/93/88/win-prizes-banner-design-vector-27409388.jpg" title="win prizes banner design" alt="win prizes banner design vector image"></noscript></a></li>
+						<li data-id="21873265" data-title="set of vintage monochrome style bowling" data-src="https://cdn1.vectorstock.com/i/thumbs/32/65/set-of-vintage-monochrome-style-bowling-vector-21873265.jpg"><a href="//www.vectorstock.com/royalty-free-vector/set-of-vintage-monochrome-style-bowling-vector-21873265" title="set of vintage monochrome style bowling vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/32/65/set-of-vintage-monochrome-style-bowling-vector-21873265.jpg" title="set of vintage monochrome style bowling" alt="set of vintage monochrome style bowling vector image"></noscript></a></li>
+						<li data-id="39957113" data-title="template for badge with basketball ball" data-src="https://cdn4.vectorstock.com/i/thumbs/71/13/template-for-badge-with-basketball-ball-vector-39957113.jpg"><a href="//www.vectorstock.com/royalty-free-vector/template-for-badge-with-basketball-ball-vector-39957113" title="template for badge with basketball ball vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/71/13/template-for-badge-with-basketball-ball-vector-39957113.jpg" title="template for badge with basketball ball" alt="template for badge with basketball ball vector image"></noscript></a></li>
+						<li data-id="22450700" data-title="basketball on fire on white" data-src="https://cdn1.vectorstock.com/i/thumbs/07/00/basketball-on-fire-on-white-vector-22450700.jpg"><a href="//www.vectorstock.com/royalty-free-vector/basketball-on-fire-on-white-vector-22450700" title="basketball on fire on white vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/07/00/basketball-on-fire-on-white-vector-22450700.jpg" title="basketball on fire on white" alt="basketball on fire on white vector image"></noscript></a></li>
+						<li data-id="21000593" data-title="set of 3d realistic football ball in golden" data-src="https://cdn4.vectorstock.com/i/thumbs/05/93/set-of-3d-realistic-football-ball-in-golden-vector-21000593.jpg"><a href="//www.vectorstock.com/royalty-free-vector/set-of-3d-realistic-football-ball-in-golden-vector-21000593" title="set of 3d realistic football ball in golden vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/05/93/set-of-3d-realistic-football-ball-in-golden-vector-21000593.jpg" title="set of 3d realistic football ball in golden" alt="set of 3d realistic football ball in golden vector image"></noscript></a></li>
+						<li data-id="21576669" data-title="modern professional poster american football" data-src="https://cdn5.vectorstock.com/i/thumbs/66/69/modern-professional-poster-american-football-vector-21576669.jpg"><a href="//www.vectorstock.com/royalty-free-vector/modern-professional-poster-american-football-vector-21576669" title="modern professional poster american football vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/66/69/modern-professional-poster-american-football-vector-21576669.jpg" title="modern professional poster american football" alt="modern professional poster american football vector image"></noscript></a></li>
+						<li data-id="42110585" data-title="slot machine casino gambling games coins fruits" data-src="https://cdn1.vectorstock.com/i/thumbs/05/85/slot-machine-casino-gambling-games-coins-fruits-vector-42110585.jpg"><a href="//www.vectorstock.com/royalty-free-vector/slot-machine-casino-gambling-games-coins-fruits-vector-42110585" title="slot machine casino gambling games coins fruits vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/05/85/slot-machine-casino-gambling-games-coins-fruits-vector-42110585.jpg" title="slot machine casino gambling games coins fruits" alt="slot machine casino gambling games coins fruits vector image"></noscript></a></li>
+						<li data-id="41482572" data-title="gui sign level up with glow effect" data-src="https://cdn3.vectorstock.com/i/thumbs/25/72/gui-sign-level-up-with-glow-effect-vector-41482572.jpg"><a href="//www.vectorstock.com/royalty-free-vector/gui-sign-level-up-with-glow-effect-vector-41482572" title="gui sign level up with glow effect vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/25/72/gui-sign-level-up-with-glow-effect-vector-41482572.jpg" title="gui sign level up with glow effect" alt="gui sign level up with glow effect vector image"></noscript></a></li>
+						<li data-id="41271431" data-title="casino banner slot machine dice coins chips" data-src="https://cdn2.vectorstock.com/i/thumbs/14/31/casino-banner-slot-machine-dice-coins-chips-vector-41271431.jpg"><a href="//www.vectorstock.com/royalty-free-vector/casino-banner-slot-machine-dice-coins-chips-vector-41271431" title="casino banner slot machine dice coins chips vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/14/31/casino-banner-slot-machine-dice-coins-chips-vector-41271431.jpg" title="casino banner slot machine dice coins chips" alt="casino banner slot machine dice coins chips vector image"></noscript></a></li>
+						<li data-id="36804033" data-title="american football retro poster template" data-src="https://cdn4.vectorstock.com/i/thumbs/40/33/american-football-retro-poster-template-vector-36804033.jpg"><a href="//www.vectorstock.com/royalty-free-vector/american-football-retro-poster-template-vector-36804033" title="american football retro poster template vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/40/33/american-football-retro-poster-template-vector-36804033.jpg" title="american football retro poster template" alt="american football retro poster template vector image"></noscript></a></li>
+						<li data-id="41328043" data-title="logo emblem of the basketball school colorful" data-src="https://cdn4.vectorstock.com/i/thumbs/80/43/logo-emblem-of-the-basketball-school-colorful-vector-41328043.jpg"><a href="//www.vectorstock.com/royalty-free-vector/logo-emblem-of-the-basketball-school-colorful-vector-41328043" title="logo emblem of the basketball school colorful vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/80/43/logo-emblem-of-the-basketball-school-colorful-vector-41328043.jpg" title="logo emblem of the basketball school colorful" alt="logo emblem of the basketball school colorful vector image"></noscript></a></li>
+						<li data-id="35036604" data-title="modern professional logo for a basketball team" data-src="https://cdn5.vectorstock.com/i/thumbs/66/04/modern-professional-logo-for-a-basketball-team-vector-35036604.jpg"><a href="//www.vectorstock.com/royalty-free-vector/modern-professional-logo-for-a-basketball-team-vector-35036604" title="modern professional logo for a basketball team vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/66/04/modern-professional-logo-for-a-basketball-team-vector-35036604.jpg" title="modern professional logo for a basketball team" alt="modern professional logo for a basketball team vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-similar-to_29259092" rel="nofollow"><span class="lrg">More Images&hellip;</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-artist" class="group">
+				<h6><span class="icon"></span><strong>More by <a href="/royalty-free-vectors/vectors-by_The_Believer" rel="nofollow">The_Believer</a></strong></h6>
+
+			<div class="gallery large">
+				<ul>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/90/84/you-win-word-concept-on-a-pink-background-vector-29259084.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-word-concept-on-a-pink-background-vector-29259084" title="you win word concept on a pink background vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/90/84/you-win-word-concept-on-a-pink-background-vector-29259084.jpg" title="you win word concept on a pink background" alt="you win word concept on a pink background vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/95/42/you-win-lettering-pop-art-text-banner-on-white-vector-29259542.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-lettering-pop-art-text-banner-on-white-vector-29259542" title="you win lettering pop art text banner on white vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/95/42/you-win-lettering-pop-art-text-banner-on-white-vector-29259542.jpg" title="you win lettering pop art text banner on white" alt="you win lettering pop art text banner on white vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/95/43/you-win-lettering-pop-art-text-banner-on-white-vector-29259543.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-lettering-pop-art-text-banner-on-white-vector-29259543" title="you win lettering pop art text banner on white vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/95/43/you-win-lettering-pop-art-text-banner-on-white-vector-29259543.jpg" title="you win lettering pop art text banner on white" alt="you win lettering pop art text banner on white vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/90/76/you-win-word-concept-with-megaphone-and-3d-style-vector-29259076.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-word-concept-with-megaphone-and-3d-style-vector-29259076" title="you win word concept with megaphone and 3d style vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/90/76/you-win-word-concept-with-megaphone-and-3d-style-vector-29259076.jpg" title="you win word concept with megaphone and 3d style" alt="you win word concept with megaphone and 3d style vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/95/44/you-won-banner-text-lettering-against-a-blue-vector-29259544.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-won-banner-text-lettering-against-a-blue-vector-29259544" title="you won banner text lettering against a blue vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/95/44/you-won-banner-text-lettering-against-a-blue-vector-29259544.jpg" title="you won banner text lettering against a blue" alt="you won banner text lettering against a blue vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/95/41/you-win-lettering-pop-art-text-banner-3d-style-vector-29259541.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-lettering-pop-art-text-banner-3d-style-vector-29259541" title="you win lettering pop art text banner 3d style vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/95/41/you-win-lettering-pop-art-text-banner-3d-style-vector-29259541.jpg" title="you win lettering pop art text banner 3d style" alt="you win lettering pop art text banner 3d style vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/89/68/you-win-word-concept-with-megaphone-and-3d-style-vector-29258968.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-word-concept-with-megaphone-and-3d-style-vector-29258968" title="you win word concept with megaphone and 3d style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/89/68/you-win-word-concept-with-megaphone-and-3d-style-vector-29258968.jpg" title="you win word concept with megaphone and 3d style" alt="you win word concept with megaphone and 3d style vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/38/65/log-in-to-win-prizes-in-gift-box-screen-vector-32033865.jpg"><a href="//www.vectorstock.com/royalty-free-vector/log-in-to-win-prizes-in-gift-box-screen-vector-32033865" title="log in to win prizes in gift box screen vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/38/65/log-in-to-win-prizes-in-gift-box-screen-vector-32033865.jpg" title="log in to win prizes in gift box screen" alt="log in to win prizes in gift box screen vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/38/59/log-in-to-win-prizes-in-gift-box-screen-vector-32033859.jpg"><a href="//www.vectorstock.com/royalty-free-vector/log-in-to-win-prizes-in-gift-box-screen-vector-32033859" title="log in to win prizes in gift box screen vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/38/59/log-in-to-win-prizes-in-gift-box-screen-vector-32033859.jpg" title="log in to win prizes in gift box screen" alt="log in to win prizes in gift box screen vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/38/58/social-media-contest-giveaway-banner-for-vector-32033858.jpg"><a href="//www.vectorstock.com/royalty-free-vector/social-media-contest-giveaway-banner-for-vector-32033858" title="social media contest giveaway banner for vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/38/58/social-media-contest-giveaway-banner-for-vector-32033858.jpg" title="social media contest giveaway banner for" alt="social media contest giveaway banner for vector image"></noscript></a></li>
+				</ul>
+			</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="32033796" data-title="giveaway winners poster template for social media" data-src="https://cdn2.vectorstock.com/i/thumbs/37/96/giveaway-winners-poster-template-for-social-media-vector-32033796.jpg"><a href="//www.vectorstock.com/royalty-free-vector/giveaway-winners-poster-template-for-social-media-vector-32033796" title="giveaway winners poster template for social media vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/37/96/giveaway-winners-poster-template-for-social-media-vector-32033796.jpg" title="giveaway winners poster template for social media" alt="giveaway winners poster template for social media vector image vector image"></noscript></a></li>
+						<li data-id="32033778" data-title="giveaway winners poster template for social media" data-src="https://cdn4.vectorstock.com/i/thumbs/37/78/giveaway-winners-poster-template-for-social-media-vector-32033778.jpg"><a href="//www.vectorstock.com/royalty-free-vector/giveaway-winners-poster-template-for-social-media-vector-32033778" title="giveaway winners poster template for social media vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/37/78/giveaway-winners-poster-template-for-social-media-vector-32033778.jpg" title="giveaway winners poster template for social media" alt="giveaway winners poster template for social media vector image vector image"></noscript></a></li>
+						<li data-id="32033866" data-title="social media contest giveaway banner for" data-src="https://cdn2.vectorstock.com/i/thumbs/38/66/social-media-contest-giveaway-banner-for-vector-32033866.jpg"><a href="//www.vectorstock.com/royalty-free-vector/social-media-contest-giveaway-banner-for-vector-32033866" title="social media contest giveaway banner for vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/38/66/social-media-contest-giveaway-banner-for-vector-32033866.jpg" title="social media contest giveaway banner for" alt="social media contest giveaway banner for vector image vector image"></noscript></a></li>
+						<li data-id="32033840" data-title="winner advertising poster on a white background" data-src="https://cdn1.vectorstock.com/i/thumbs/38/40/winner-advertising-poster-on-a-white-background-vector-32033840.jpg"><a href="//www.vectorstock.com/royalty-free-vector/winner-advertising-poster-on-a-white-background-vector-32033840" title="winner advertising poster on a white background vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/38/40/winner-advertising-poster-on-a-white-background-vector-32033840.jpg" title="winner advertising poster on a white background" alt="winner advertising poster on a white background vector image vector image"></noscript></a></li>
+						<li data-id="32033839" data-title="winner advertising poster on a white background" data-src="https://cdn5.vectorstock.com/i/thumbs/38/39/winner-advertising-poster-on-a-white-background-vector-32033839.jpg"><a href="//www.vectorstock.com/royalty-free-vector/winner-advertising-poster-on-a-white-background-vector-32033839" title="winner advertising poster on a white background vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/38/39/winner-advertising-poster-on-a-white-background-vector-32033839.jpg" title="winner advertising poster on a white background" alt="winner advertising poster on a white background vector image vector image"></noscript></a></li>
+						<li data-id="29258962" data-title="megaphone with bubble and inscription did you" data-src="https://cdn3.vectorstock.com/i/thumbs/89/62/megaphone-with-bubble-and-inscription-did-you-vector-29258962.jpg"><a href="//www.vectorstock.com/royalty-free-vector/megaphone-with-bubble-and-inscription-did-you-vector-29258962" title="megaphone with bubble and inscription did you vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/89/62/megaphone-with-bubble-and-inscription-did-you-vector-29258962.jpg" title="megaphone with bubble and inscription did you" alt="megaphone with bubble and inscription did you vector image vector image"></noscript></a></li>
+						<li data-id="29258975" data-title="you win word concept with megaphone and 3d style" data-src="https://cdn1.vectorstock.com/i/thumbs/89/75/you-win-word-concept-with-megaphone-and-3d-style-vector-29258975.jpg"><a href="//www.vectorstock.com/royalty-free-vector/you-win-word-concept-with-megaphone-and-3d-style-vector-29258975" title="you win word concept with megaphone and 3d style vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/89/75/you-win-word-concept-with-megaphone-and-3d-style-vector-29258975.jpg" title="you win word concept with megaphone and 3d style" alt="you win word concept with megaphone and 3d style vector image vector image"></noscript></a></li>
+						<li data-id="29258956" data-title="megaphone with bubble and inscription did you" data-src="https://cdn2.vectorstock.com/i/thumbs/89/56/megaphone-with-bubble-and-inscription-did-you-vector-29258956.jpg"><a href="//www.vectorstock.com/royalty-free-vector/megaphone-with-bubble-and-inscription-did-you-vector-29258956" title="megaphone with bubble and inscription did you vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/89/56/megaphone-with-bubble-and-inscription-did-you-vector-29258956.jpg" title="megaphone with bubble and inscription did you" alt="megaphone with bubble and inscription did you vector image vector image"></noscript></a></li>
+						<li data-id="32033857" data-title="giveaway landing page template modern flat" data-src="https://cdn3.vectorstock.com/i/thumbs/38/57/giveaway-landing-page-template-modern-flat-vector-32033857.jpg"><a href="//www.vectorstock.com/royalty-free-vector/giveaway-landing-page-template-modern-flat-vector-32033857" title="giveaway landing page template modern flat vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/38/57/giveaway-landing-page-template-modern-flat-vector-32033857.jpg" title="giveaway landing page template modern flat" alt="giveaway landing page template modern flat vector image vector image"></noscript></a></li>
+						<li data-id="32033867" data-title="giveaway landing page template modern flat" data-src="https://cdn3.vectorstock.com/i/thumbs/38/67/giveaway-landing-page-template-modern-flat-vector-32033867.jpg"><a href="//www.vectorstock.com/royalty-free-vector/giveaway-landing-page-template-modern-flat-vector-32033867" title="giveaway landing page template modern flat vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/38/67/giveaway-landing-page-template-modern-flat-vector-32033867.jpg" title="giveaway landing page template modern flat" alt="giveaway landing page template modern flat vector image vector image"></noscript></a></li>
+						<li data-id="29259042" data-title="kids zone colorful banner" data-src="https://cdn3.vectorstock.com/i/thumbs/90/42/kids-zone-colorful-banner-vector-29259042.jpg"><a href="//www.vectorstock.com/royalty-free-vector/kids-zone-colorful-banner-vector-29259042" title="kids zone colorful banner vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/90/42/kids-zone-colorful-banner-vector-29259042.jpg" title="kids zone colorful banner" alt="kids zone colorful banner vector image vector image"></noscript></a></li>
+						<li data-id="29259107" data-title="kids zone cartoon logo colorful bubble letters" data-src="https://cdn3.vectorstock.com/i/thumbs/91/07/kids-zone-cartoon-logo-colorful-bubble-letters-vector-29259107.jpg"><a href="//www.vectorstock.com/royalty-free-vector/kids-zone-cartoon-logo-colorful-bubble-letters-vector-29259107" title="kids zone cartoon logo colorful bubble letters vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/91/07/kids-zone-cartoon-logo-colorful-bubble-letters-vector-29259107.jpg" title="kids zone cartoon logo colorful bubble letters" alt="kids zone cartoon logo colorful bubble letters vector image vector image"></noscript></a></li>
+						<li data-id="29258963" data-title="super banner for children area in a cartoon" data-src="https://cdn4.vectorstock.com/i/thumbs/89/63/super-banner-for-children-area-in-a-cartoon-vector-29258963.jpg"><a href="//www.vectorstock.com/royalty-free-vector/super-banner-for-children-area-in-a-cartoon-vector-29258963" title="super banner for children area in a cartoon vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/89/63/super-banner-for-children-area-in-a-cartoon-vector-29258963.jpg" title="super banner for children area in a cartoon" alt="super banner for children area in a cartoon vector image vector image"></noscript></a></li>
+						<li data-id="25682044" data-title="partys children are a colorful banner cartoon" data-src="https://cdn5.vectorstock.com/i/thumbs/20/44/partys-children-are-a-colorful-banner-cartoon-vector-25682044.jpg"><a href="//www.vectorstock.com/royalty-free-vector/partys-children-are-a-colorful-banner-cartoon-vector-25682044" title="partys children are a colorful banner cartoon vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/20/44/partys-children-are-a-colorful-banner-cartoon-vector-25682044.jpg" title="partys children are a colorful banner cartoon" alt="partys children are a colorful banner cartoon vector image vector image"></noscript></a></li>
+						<li data-id="29258969" data-title="super banner for children area in a cartoon" data-src="https://cdn5.vectorstock.com/i/thumbs/89/69/super-banner-for-children-area-in-a-cartoon-vector-29258969.jpg"><a href="//www.vectorstock.com/royalty-free-vector/super-banner-for-children-area-in-a-cartoon-vector-29258969" title="super banner for children area in a cartoon vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/89/69/super-banner-for-children-area-in-a-cartoon-vector-29258969.jpg" title="super banner for children area in a cartoon" alt="super banner for children area in a cartoon vector image vector image"></noscript></a></li>
+						<li data-id="29259180" data-title="vs versus blue and red comic design" data-src="https://cdn1.vectorstock.com/i/thumbs/91/80/vs-versus-blue-and-red-comic-design-vector-29259180.jpg"><a href="//www.vectorstock.com/royalty-free-vector/vs-versus-blue-and-red-comic-design-vector-29259180" title="vs versus blue and red comic design vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/91/80/vs-versus-blue-and-red-comic-design-vector-29259180.jpg" title="vs versus blue and red comic design" alt="vs versus blue and red comic design vector image vector image"></noscript></a></li>
+						<li data-id="32033853" data-title="versus logo blue vs red vs letters competition" data-src="https://cdn4.vectorstock.com/i/thumbs/38/53/versus-logo-blue-vs-red-vs-letters-competition-vector-32033853.jpg"><a href="//www.vectorstock.com/royalty-free-vector/versus-logo-blue-vs-red-vs-letters-competition-vector-32033853" title="versus logo blue vs red vs letters competition vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/38/53/versus-logo-blue-vs-red-vs-letters-competition-vector-32033853.jpg" title="versus logo blue vs red vs letters competition" alt="versus logo blue vs red vs letters competition vector image vector image"></noscript></a></li>
+						<li data-id="29258828" data-title="compared to screen vs abstract background" data-src="https://cdn4.vectorstock.com/i/thumbs/88/28/compared-to-screen-vs-abstract-background-vector-29258828.jpg"><a href="//www.vectorstock.com/royalty-free-vector/compared-to-screen-vs-abstract-background-vector-29258828" title="compared to screen vs abstract background vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/88/28/compared-to-screen-vs-abstract-background-vector-29258828.jpg" title="compared to screen vs abstract background" alt="compared to screen vs abstract background vector image vector image"></noscript></a></li>
+						<li data-id="25682003" data-title="vs comparison fighting backgrounds in flat" data-src="https://cdn4.vectorstock.com/i/thumbs/20/03/vs-comparison-fighting-backgrounds-in-flat-vector-25682003.jpg"><a href="//www.vectorstock.com/royalty-free-vector/vs-comparison-fighting-backgrounds-in-flat-vector-25682003" title="vs comparison fighting backgrounds in flat vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/20/03/vs-comparison-fighting-backgrounds-in-flat-vector-25682003.jpg" title="vs comparison fighting backgrounds in flat" alt="vs comparison fighting backgrounds in flat vector image vector image"></noscript></a></li>
+						<li data-id="29259097" data-title="vs versus letter logo on transparent background" data-src="https://cdn3.vectorstock.com/i/thumbs/90/97/vs-versus-letter-logo-on-transparent-background-vector-29259097.jpg"><a href="//www.vectorstock.com/royalty-free-vector/vs-versus-letter-logo-on-transparent-background-vector-29259097" title="vs versus letter logo on transparent background vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/90/97/vs-versus-letter-logo-on-transparent-background-vector-29259097.jpg" title="vs versus letter logo on transparent background" alt="vs versus letter logo on transparent background vector image vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-by_The_Believer" rel="nofollow"><span class="lrg">More Images&hellip;</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-keywords" class="group">
+				<h6><span class="icon"></span><strong>Related Searches</strong></h6>
+				<ul>
+					<li><a href="/royalty-free-vectors/win-vectors">Win</a></li>
+					<li><a href="/royalty-free-vectors/background-vectors">Background</a></li>
+					<li><a href="/royalty-free-vectors/you-vectors">You</a></li>
+					<li><a href="/royalty-free-vectors/game-vectors">Game</a></li>
+					<li><a href="/royalty-free-vectors/announcement-vectors">Announcement</a></li>
+					<li><a href="/royalty-free-vectors/winner-vectors">Winner</a></li>
+					<li><a href="/royalty-free-vectors/banner-vectors">Banner</a></li>
+					<li><a href="/royalty-free-vectors/business-vectors">Business</a></li>
+					<li><a href="/royalty-free-vectors/graphic-vectors">Graphic</a></li>
+					<li><a href="/royalty-free-vectors/design-vectors">Design</a></li>
+					<li><a href="/royalty-free-vectors/icon-vectors">Icon</a></li>
+					<li><a href="/royalty-free-vectors/competition-vectors">Competition</a></li>
+					<li><a href="/royalty-free-vectors/audio-vectors">Audio</a></li>
+					<li><a href="/royalty-free-vectors/abstract-vectors">Abstract</a></li>
+					<li><a href="/royalty-free-vectors/draw-vectors">Draw</a></li>
+					<li><a href="/royalty-free-vectors/gift-vectors">Gift</a></li>
+					<li><a href="/royalty-free-vectors/character-vectors">Character</a></li>
+					<li><a href="/royalty-free-vectors/loud-vectors">Loud</a></li>
+					<li><a href="/royalty-free-vectors/message-vectors">Message</a></li>
+					<li><a href="/royalty-free-vectors/confetti-vectors">Confetti</a></li>
+					<li><a href="/royalty-free-vectors/note-vectors">Note</a></li>
+					<li><a href="/royalty-free-vectors/isolated-vectors">Isolated</a></li>
+					<li><a href="/royalty-free-vectors/contest-vectors">Contest</a></li>
+					<li><a href="/royalty-free-vectors/entry-vectors">Entry</a></li>
+					<li><a href="/royalty-free-vectors/lucky-vectors">Lucky</a></li>
+					<li><a href="/royalty-free-vectors/alert-vectors">Alert</a></li>
+					<li><a href="/royalty-free-vectors/attention-vectors">Attention</a></li>
+					<li><a href="/royalty-free-vectors/lottery-vectors">Lottery</a></li>
+					<li><a href="/royalty-free-vectors/announce-vectors">Announce</a></li>
+					<li><a href="/royalty-free-vectors/notification-vectors">Notification</a></li>
+					<li><a href="/royalty-free-vectors/megaphone-vectors">Megaphone</a></li>
+					<li><a href="/royalty-free-vectors/amplify-vectors">Amplify</a></li>
+					<li><a href="/royalty-free-vectors/vector-vectors">Vector</a></li>
+					<li><a href="/royalty-free-vectors/clipart-vectors">Clipart</a></li>
+					<li><a href="/royalty-free-vectors/vintage-vectors">Vintage</a></li>
+					<li><a href="/royalty-free-vectors/speaker-vectors">Speaker</a></li>
+					<li><a href="/royalty-free-vectors/flyer-vectors">Flyer</a></li>
+					<li><a href="/royalty-free-vectors/people-vectors">People</a></li>
+					<li><a href="/royalty-free-vectors/web-vectors">Web</a></li>
+					<li><a href="/royalty-free-vectors/flat-vectors">Flat</a></li>
+					<li><a href="/royalty-free-vectors/reward-vectors">Reward</a></li>
+					<li><a href="/royalty-free-vectors/team-vectors">Team</a></li>
+					<li><a href="/royalty-free-vectors/voice-vectors">Voice</a></li>
+					<li><a href="/royalty-free-vectors/funny-vectors">Funny</a></li>
+					<li><a href="/royalty-free-vectors/poster-vectors">Poster</a></li>
+					<li><a href="/royalty-free-vectors/surprise-vectors">Surprise</a></li>
+					<li><a href="/royalty-free-vectors/prize-vectors">Prize</a></li>
+					<li><a href="/royalty-free-vectors/offer-vectors">Offer</a></li>
+					<li><a href="/royalty-free-vectors/public-vectors">Public</a></li>
+					<li><a href="/royalty-free-vectors/ui-vectors">Ui</a></li>
+					<li><a href="/royalty-free-vectors/mobile-vectors">Mobile</a></li>
+					<li><a href="/royalty-free-vectors/app-vectors">App</a></li>
+				</ul>
+			</div>
+		</section>
+	</article>
+
+	<!-- Footer -->
+	<footer>
+		<div>
+		<div class="column c1">
+			<nav class="company">
+				<h4>VectorStock</h4>
+				<ul>
+					<li><a href="/" title="Home">Home</a></li>
+					<li class="sel"><a href="/free-vectors" title="Free Vectors">Free Vectors</a></li>
+					<li class="sel"><a href="/royalty-free-vectors" title="All Royalty-Free Vectors">All Vectors</a></li>
+				</ul>
+				<ul>
+					<li><a href="/what-is-a-vector" title="What is a Vector?">What is a Vector?</a></li>
+				</ul>
+				<ul>
+					<li class="sel"><a href="/faq" title="Frequently Asked Questions"><span class="long">Frequently Asked Questions</span><span class="short">FAQs</span></a></li>
+					<li><a href="/faq/members/terms-of-use" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+					<li class="sel"><a href="/contact" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="column c2">
+			<nav class="account">
+				<h4><span class="title">Account</span><span class="icon"></span></h4>
+					<ul>
+						<li><a href="/signup" title="Join Now">Join Now</a></li>
+						<li><a href="/pricing" title="Pricing">Pricing</a></li>
+						<li><a href="/?signup=1&contributor=1" title="Contributor Sign Up">Contributor Sign Up</a></li>
+						<li><a href="/faq/artists/why-sell-at-vectorstock" title="Contributor FAQ">Contributor FAQ</a></li>
+					</ul>
+			</nav>
+		</div>
+		<div class="column c3">
+			<nav class="social">
+				<h4>Social</h4>
+				<ul>
+					<li class="facebook sel"><a href="https://www.facebook.com/VectorStock" target="_blank" rel="noreferrer"><span class="title">Facebook</span><span class="icon"></span></a></li>
+					<li class="pinterest sel"><a href="https://pinterest.com/vectorstock/" target="_blank" rel="noreferrer"><span class="title">Pinterest</span><span class="icon"></span></a></li>
+					<li class="twitter sel"><a href="https://twitter.com/VectorStock" target="_blank" rel="noreferrer"><span class="title">Twitter</span><span class="icon"></span></a></li>
+				</ul>
+			</nav>
+			<div class="signoff">
+				<h5><a href="https://www.vectorstock.com/" title="VectorStock&reg;">VectorStock&reg;</a></h5>
+				<p>VectorStock and the VectorStock logo are registered trademarks of VectorStock Media.<br>
+				&copy; 2022. <span>All Rights Reserved.</span></p>
+			</div>
+		</div>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript" nonce="/YA/Qo6rpzjsHU6IIb/JpAQKAQAPMCHhPT3vGl5qZcc=">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"02e09611df","applicationID":"156179534","transactionName":"ZV0ENRYCC0RYAkVbDVwXJRQXFwpaFhNeSwNeTB9MAhEAUhQXVFEWXUpJFw0GEg==","queueTime":0,"applicationTime":44,"atts":"SRoHQ14YGEo=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
+
+</body>
+</html>

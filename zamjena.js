@@ -1,0 +1,5 @@
+console.log("bti cu programer")
+console.log("uskoro")
+console.log(42+5)
+console.log(560/5)
+alert("Fića")
